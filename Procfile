@@ -1,1 +1,1 @@
-web: gunicorn プロジェクトフォルダー名.wsgi --log-file -
+web: gunicorn bop_porker2.wsgi --log-file -
