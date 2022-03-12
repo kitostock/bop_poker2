@@ -22,7 +22,7 @@ class Task(models.Model):
 
 
 class BopInfo(models.Model):
-
+    id = models.AutoField(primary_key=True)
     user_id = models.CharField(max_length=11)
     category_id = models.CharField(max_length=11)
     rate_id = models.CharField(max_length=11)
