@@ -22,7 +22,6 @@ class Task(models.Model):
 
 
 class BopInfo(models.Model):
-    id = models.AutoField(primary_key=True)
     user_id = models.CharField(max_length=11)
     category_id = models.CharField(max_length=11)
     rate_id = models.CharField(max_length=11)
@@ -35,7 +34,7 @@ class BopInfo(models.Model):
     updated_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.user_id) + " - " + str(self.category_id) + " - " + str(self.rate_id)
+        return str(self.id) 
 
 class PersonalCategory(models.Model):
 
