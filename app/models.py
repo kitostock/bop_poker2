@@ -22,6 +22,7 @@ class Task(models.Model):
 
 
 class BopInfo(models.Model):
+
     user_id = models.CharField(max_length=11)
     category_id = models.CharField(max_length=11)
     rate_id = models.CharField(max_length=11)
@@ -34,9 +35,10 @@ class BopInfo(models.Model):
     updated_date = models.DateTimeField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.id)
+        return str(self.user_id) + " - " + str(self.category_id) + " - " + str(self.rate_id)
 
 class PersonalCategory(models.Model):
+
     category_id = models.CharField(max_length=11, primary_key=True)
     user_id = models.CharField(max_length=11)
     category_name = models.CharField(max_length=255)
@@ -47,6 +49,7 @@ class PersonalCategory(models.Model):
         return str(self.category_id) + " - " + self.category_name
 
 class PersonalRate(models.Model):
+
     rate_id = models.CharField(max_length=11, primary_key=True)
     user_id = models.CharField(max_length=11)
     rate_name = models.CharField(max_length=255)
